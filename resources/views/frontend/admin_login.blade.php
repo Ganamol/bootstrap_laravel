@@ -27,7 +27,7 @@
       <div class="col-lg-8">
         <div class="card-body py-5 px-md-5">
 
-      <form method="POST" action="{{route('do.login') }}">
+      <form method="POST" action="{{route('admindo.login') }}">
                 @csrf
                 <div class="form-outline mb-4">
                     <input name="email" type="email" class="form-control" required />

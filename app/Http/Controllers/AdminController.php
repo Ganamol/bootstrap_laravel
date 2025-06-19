@@ -3,32 +3,22 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class FrontendController extends Controller
-{
-   public function index()
+class AdminController extends Controller{
+
+    public function adminlogin()
    {
-    return view('frontend.index');
+    return view('frontend.admin_login');
    }
-     public function login()
-   {
-    return view('frontend.login');
-   }
-    
-      public function register()
-   {
-    return view('frontend.register');
-   }
-    public function dologin(Request $request)
+ public function dologin(Request $request)
      {
 
        
         $credentials = $request->only('email', 'password');
 
-        if (Auth::attempt($credentials)) { 
+         if (Auth::guard('admin')->attempt($credentials)){ 
             $users = User::all();
             $status = $users->first()->status;
             if ($status == 1) {
@@ -46,3 +36,5 @@ class FrontendController extends Controller
         }
     }
 }
+
+

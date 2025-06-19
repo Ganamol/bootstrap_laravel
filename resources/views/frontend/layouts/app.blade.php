@@ -301,8 +301,9 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle pe-3" role="button" id="pages" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
                 <ul class="dropdown-menu border-0 p-3 rounded-0 shadow" aria-labelledby="pages">
-                  <li><a href="{{route('login')}}" class="dropdown-item">Login</a></li>
-                  <li><a href="" class="dropdown-item">Register </a></li>
+                  <li><a href="{{route('adminlogin')}}" class="dropdown-item">Admin Login</a></li>
+                     <li><a href="{{route('login')}}" class="dropdown-item">Login</a></li>
+                  <li><a href="{{route('register')}}" class="dropdown-item">Register </a></li>
                  
                 </ul>
               </li>
